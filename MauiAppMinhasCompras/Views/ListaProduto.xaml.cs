@@ -1,5 +1,6 @@
 using MauiAppMinhasCompras.Models;
 using System.Collections.ObjectModel;
+using MauiAppMinhasCompras.Views;
 
 namespace MauiAppMinhasCompras.Views;
 
@@ -130,5 +131,10 @@ public partial class ListaProduto : ContentPage
         {
             lst_produtos.IsRefreshing = false;
         }
+    }
+
+    private async void AbrirRelatorio_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RelatorioPeriodo());
     }
 }
